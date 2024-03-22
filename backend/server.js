@@ -10,8 +10,7 @@ const connectDatabase=()=>{
     mongoose.connect("mongodb+srv://nandanupadhyay1234:pkPPznLjgogmQZkC@cluster0.5ltnqvy.mongodb.net/Financemanagement",{dbName:"Financemanagement"
        }).then((data)=>{
             console.log(`Mongodb connected with server: ${data.connection.host}`);
-        })
-        
+        })    
 } 
 
 app.use(bodyParser.json());

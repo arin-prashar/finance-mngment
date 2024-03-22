@@ -60,4 +60,45 @@ exports.deleteCategory = async (req, res) => {
         res.status(400).send(error);
 }};
 
+exports.create_budget = async (req, res) => {
+    try{
+        // const budget =  await Budget.findOne({ username: req.params.username });
+        // if(budget){
+        //     return res.status(400).send({ error: 'Budget already exists' });
+        // }
 
+        const {name,income,categories}= req.body;
+        
+        const newBudget = await Budget.create(
+            // username: req.params.username,
+            {name,income,categories}
+        );
+        // await newBudget.save();
+        res.status(200).send("Budget created successfully"+newBudget);
+    }
+    catch(error){
+        res.status(400).send(error);
+}};
+
+exports.delete_budget = async (req, res) => {
+    try{
+        const budget = await Budget.findOne({ username: req.params.username });
+        if (!budget) {
+            return res.status(404).send({ error: 'User/Budget Not Found' });
+        }
+        await budget.remove();
+        res.send({message: 'Budget deleted successfully'});
+    }
+    catch (error) {
+        res.status(400).send(error);
+}};
+
+// MADE FUNCTIONS names
+/* 
+create_category
+deleteCategory
+updateBudget
+create_budget
+delete_budget
+getBudget
+*/
