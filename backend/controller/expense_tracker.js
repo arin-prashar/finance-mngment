@@ -5,22 +5,11 @@ const tracker = require('../model/exp_tracker');
 // Create and Save a new tracker
 exports.create = (req, res) => {
     // create a expense tracker for user
-    const track = new tracker({
-    
+    const track = new tracker.create({
         user: req.body.userId,
         expense: req.body.expense,
         description: req.body.description
     });
-
-    // Save tracker in the database
-    track.save()
-        .then(data => {
-            res.send(data);
-        }).catch(err => {
-            res.status(500).send({
-                message: err.message || "Some error occurred while creating the tracker."
-            });
-        });
 };
 
 // Retrieve and return all trackers from the database for the user
@@ -35,4 +24,28 @@ exports.findAll = (req, res) => {
         });
 };
 
-// Edit trackers for user
+// Edit trackers for user with trackerId
+exports.edit = (req, res) => {
+    // Find tracker and update it with the request
+    tracker.findByIdAndUpdate(req.params.trackerId, {
+        expense: req.body.expense,
+        description: req.body.description
+    }, {new: true})
+        .then(track => {
+            if (!track) {
+                return res.status(404).send({
+                    message: "tracker not found with id " + req.params.trackerId
+                });
+            }
+            res.send(track);
+        }).catch(err => {
+            if (err.kind === 'ObjectId') {
+                return res.status(404).send({
+                    message: "tracker not found with id " + req.params.trackerId
+                });
+            }
+            return res.status(500).send({
+                message: "Error updating tracker with id " + req.params.trackerId
+            });
+        });
+};
