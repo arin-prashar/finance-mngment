@@ -1,17 +1,17 @@
 // budget model 
 
 const mongoose = require('mongoose');
-const User = require('./user_model');
+// const User = require('./user_model');
 
-const budgetSchema = new mongoose.Schema({
-  user: {  // Reference the owner of the budget
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', 
-    required: true 
-  },
+const BudgetSchema = new mongoose.Schema({
+  // user: {  // Reference the owner of the budget
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'User', 
+  //   required: true 
+  // },
   username:{
     type: String,
-    required: true
+    
   },
   name: {  // Budget name (e.g., "Monthly Budget", "Vacation Fund")
     type: String,
@@ -46,4 +46,4 @@ const budgetSchema = new mongoose.Schema({
   timestamps: true, // Automatically add 'createdAt' and 'updatedAt' fields
 });
 
-module.exports = mongoose.model('Budget', budgetSchema); 
+module.exports = mongoose.model('Budget', BudgetSchema);

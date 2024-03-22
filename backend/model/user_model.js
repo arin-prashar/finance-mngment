@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const UserSchema=new mongoose.Schema({
-    user_id:{
-        // auto assigned by mongodb
-        type:mongoose.Schema.Types.ObjectId,
-        required:true,
-        unique:true
-    },
+    // user_id:{
+    //     // auto assigned by mongodb
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     required:true,
+    //     unique:true
+    // },
     username:{
         type:String,
         required:true,
@@ -27,3 +27,5 @@ const UserSchema=new mongoose.Schema({
 },{
     timestamps:true
 });
+
+module.exports=mongoose.model('User',UserSchema);
