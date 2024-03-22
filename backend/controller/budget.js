@@ -2,7 +2,7 @@
 // student can set monthly budgets for each category
 
 const Budget = require('../models/budget_budget');
-
+const User = require('../models/user_model');
 
 // Create a new budget catergory
 exports.create_category = async (req, res) => {

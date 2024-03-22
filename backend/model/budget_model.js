@@ -1,7 +1,7 @@
 // budget model 
 
 const mongoose = require('mongoose');
-
+const User = require('./user_model');
 const budgetSchema = new mongoose.Schema({
   user: {  // Reference the owner of the budget
     type: mongoose.Schema.Types.ObjectId,
