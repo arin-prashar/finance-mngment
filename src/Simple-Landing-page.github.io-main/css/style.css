@@ -204,7 +204,7 @@ header {
 /* bagian awal nav */
 nav{
     width: 100%;
-    height: 60px;
+    height: 65px;
     background-color: royalblue;
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -559,7 +559,7 @@ h1.project-h1{
 /* footer awal */
 footer{
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     background-color: #0252B2;
     margin-top: 50px;
     padding: 50px 100px 0 ;
@@ -629,7 +629,7 @@ i.alamat.alamat-3{
     background-color: #4b84ca;
     border-radius: 5px;
 }
-.insta .fa-instagram, .twitt .fa-twitter, .face .fa-facebook{
+.insta .fa-instagram, .twitt .fa-twitter, .face .fa-linkedin{
     color: white;
     margin: 5px 0 0 5px;
     transition: all .3s;
@@ -641,7 +641,7 @@ i.alamat.alamat-3{
 .fa-instagram:hover{
     color: rgb(193,53,132);
 }
-.fa-facebook:hover{
+.fa-linkedin:hover{
     color: rgb(31, 91, 212);
 }
 .fa-twitter:hover{
