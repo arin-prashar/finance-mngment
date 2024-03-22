@@ -9,7 +9,7 @@ const router=express.Router();
 router.post('/registerUser',registerUser.register);
 
 //Budget Tools
-router.post('/createBudget',authentication.authorization,createBudget.create_budget)
+router.post('/createBudget',authentication.authorization,createBudget.create_budget);
 
 //expense Tracker
 router.post('/createExpense',expenseTracker.create);
