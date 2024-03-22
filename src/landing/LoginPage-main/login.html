@@ -540,7 +540,7 @@
         };
       
         try {
-          const response = await fetch('http://localhost:3000/login', {
+          const response = await fetch('/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -575,7 +575,7 @@
           email : email,
           password: password
         };
-          const response = await fetch('http://localhost:3000/registerUser', {
+          const response = await fetch('/registerUser', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
