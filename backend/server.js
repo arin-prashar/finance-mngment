@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/users',userRoute);
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname+"./");
-  res.send("What's up doc ?!");
+    res.sendFile("/home/dkg/Study/finance-mngment/src/landing/index.html");
+  // res.send("What's up doc ?!");
 });
 
 connectDatabase();
@@ -27,5 +27,4 @@ connectDatabase();
 // start the server
 app.listen(3000, () => {
   console.log(`server running : http://localhost:3000`);
-
   });
