@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Sign in & Sign up Form</title>
   </head>
@@ -11,19 +14,22 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form id="loginForm" class="sign-in-form">
+          <form action="#" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input id="l_username" type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input id="l_password"type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" />
             </div>
-            <input id="l_submit" type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
               <a href="#" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -35,23 +41,26 @@
               </a>
             </div>
           </form>
-          <form id="registerForm" class="sign-up-form">
+          <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input id="r_username"type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input id="r_email"type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input id="r_password"type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" />
             </div>
-            <input id="r_submit" type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
               <a href="#" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
@@ -93,7 +102,7 @@
         </div>
       </div>
     </div>
-    <div id="result"></div>
+
     <script src="app.js"></script>
   </body>
 </html>
