@@ -2,29 +2,29 @@ const mongoose = require("mongoose");
 const User = require('./user_model');
 
 const trackerSchema=new mongoose.Schema({
-    user:{
-        type:User.Schema.Types.ObjectId,
-        ref:'User',
+    username:{
+        type:String,
         required:true
     },
-    tracker_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        required:true,
-        trim:true
-    },
-    expense:{
+    // tracker_id:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     required:true,
+    //     trim:true
+    // },
+    expenseName:{type:String,
+    required:true},
+    
+    expenseAmt:{
         type:Number,
         required:true,
-        trim:true
+      
     },
     description:{
         type:String,
-        required:true,
         trim:true
     }
 },{
     timestamps:true
 });
 
-const Tracker = mongoose.model('Tracker', trackerSchema);
-module.exports = Tracker;
+module.exports = mongoose.model('Tracker', trackerSchema);

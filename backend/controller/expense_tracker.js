@@ -1,18 +1,22 @@
 const Tracker = require('../model/exp_tracker');
+const mongoose=require('mongoose')
 
 // Create and Save a new tracker
 exports.create = async (req, res) => {
     // create a expense tracker for user
-    const track = await  new Tracker.create({
-        user: req.body.userId,
-        expense: req.body.expense,
+    const track = await Tracker.create({
+        username:req.query.username,
+        expenseName: req.body.expenseName,
+        expenseAmt: req.body.expenseAmt,
         description: req.body.description
     });
+
+    res.status(200).send({msg:"expense created",track});
 };
 
 // Retrieve and return all trackers from the database for the user
 exports.findAll = async (req, res) => {
-    await Tracker.find({user:req.params.userId})
+    await Tracker.find({username:req.query.username})
         .then(trackers => {
             res.send(trackers);
         }).catch(err => {
