@@ -59,18 +59,4 @@ expors.deleteCategory = async (req, res) => {
         res.status(400).send(error);
 }};
 
-exports.new_user = async (req, res) => {
-    try{
-        const budget = new Budget({
-            username: req.body.username,
-            name: req.body.name,
-            income: req.body.income,
-            categories: "None"
-        });
-        await budget.save();
-        res.status(201).send(budget);
-    }
-    catch (error) {
-        res.status(400).send(error);
-}};
 
