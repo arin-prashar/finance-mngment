@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #openFormButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  #openFormButton:hover {
+    background-color: #0056b3;
+  }
+  
+  #budgetForm {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 25px; 
+  }
+  
+  #budgetForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #budgetForm input[type="text"],
+  #budgetForm input[type="number"],
+  #budgetForm input[type="date"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #submitBudget {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submitBudget:hover {
+    background-color: #3e8e41;
+  }
+  
+  .budgetCard {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+  }
+  
+  .budgetCard h3 {
+    color: #333;
+    margin-bottom: 10px; 
+  }
+  
+  .budgetCard p {
+    margin-bottom: 5px;
+  }
+
+
+  #budgetsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  #budgetForm { 
+    /* ... (Your existing styles) */
+    margin-bottom: 30px; /* Add spacing below the form */
+ }
