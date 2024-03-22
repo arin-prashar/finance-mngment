@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>Expense Tracker</h1>
+
+ <button id="openExpenseFormButton">Add New Expense</button>
+
+ <div id="expenseForm" style="display:none;">
+  <h2>Add Expense</h2>
+  <label for="expenseName">Expense Name:</label>
+  <input type="text" id="expenseName"><br>
+
+  <label for="expenseDescription">Description:</label>
+  <textarea id="expenseDescription" rows="4"></textarea><br> 
+
+  <label for="expenseAmount">Amount:</label>
+  <input type="number" id="expenseAmount"><br>
+
+  <button id="submitExpense">Submit</button> 
+</div>
+
+ <div id="budgetsContainer">
+   </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
