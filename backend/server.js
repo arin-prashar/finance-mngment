@@ -19,7 +19,7 @@ app.use('/users',userRoute);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname+"./");
-  res.send("What's up doc ?!");
+//   res.send("What's up doc ?!");
 });
 
 connectDatabase();
