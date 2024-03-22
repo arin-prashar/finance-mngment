@@ -126,7 +126,7 @@ header {
 
 /* navbar buttons */
 .nav-ul button {
-    background-color: blueviolet; /* Green */
+    background-color: rgb(58, 58, 210); /* Green */
     border: none;
     border-radius: 10px;
     color: white;
@@ -141,7 +141,7 @@ header {
 }
 
 .nav-ul button:hover {
-    background-color: blue; /* Darker green on hover */
+    background-color: rgb(36, 22, 129); /* Darker green on hover */
 }
 
 /* bagian 2 header */
