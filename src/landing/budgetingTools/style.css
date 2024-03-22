@@ -105,3 +105,22 @@ body {
   .budgetCard p:last-child { /* Add this */
     margin-bottom: 0px;   /* Remove extra space at the bottom */
   }
+
+  .deleteButton {
+    background-color: #dc3545; /* Example red color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .updateButton {
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between the buttons*/
+}
