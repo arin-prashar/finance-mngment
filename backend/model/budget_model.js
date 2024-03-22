@@ -45,4 +45,4 @@ const budgetSchema = new mongoose.Schema({
   timestamps: true, // Automatically add 'createdAt' and 'updatedAt' fields
 });
 
-module.exports = mongoose.model('Budget', budgetSchema); 
+module.exports = mongoose.model('Budget', budgetSchema);

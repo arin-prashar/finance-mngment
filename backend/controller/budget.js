@@ -1,16 +1,17 @@
 // budget management
 // student can set monthly budgets for each category
 
-const Budget = require('../models/budget_budget');
-const User = require('../models/user_model');
+const Budget = require('../model/budget_model');
+const User = require('../model/user_model');
 
 // Create a new budget catergory
 exports.create_category = async (req, res) => {
   try {
-    const budget = new Budget({
+    const budget = new Budget.create({
       categories: req.body.categories
     });
-    await budget.save();
+    // await budget.save();
+    console.log(budget);
     res.status(201).send(budget);
   } catch (error) {
     res.status(400).send(error);
@@ -45,7 +46,7 @@ exports.updateBudget = async (req, res) => {
 }};
 
 // Delete a budget category using username
-expors.deleteCategory = async (req, res) => {
+exports.deleteCategory = async (req, res) => {
     try{
         const budget = await Budget.findOne({ username: req.params.username });
         if (!budget) {
