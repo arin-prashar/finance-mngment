@@ -97,3 +97,11 @@ body {
     /* ... (Your existing styles) */
     margin-bottom: 30px; /* Add spacing below the form */
  }
+
+ .budgetCard p {
+    margin-bottom: 5px;  /* Existing style */
+  }
+  
+  .budgetCard p:last-child { /* Add this */
+    margin-bottom: 0px;   /* Remove extra space at the bottom */
+  }
