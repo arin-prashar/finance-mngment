@@ -16,7 +16,7 @@ const connectDatabase=()=>{
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use('/users',userRoute);
+app.use(userRoute);
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve("src/index.html"));
