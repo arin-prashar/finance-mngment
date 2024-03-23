@@ -540,7 +540,7 @@
         };
       
         try {
-          const response = await fetch('http://localhost:3000/login', {
+          const response = await fetch('/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -565,7 +565,8 @@
         }
       });
       
-      document.getElementById('r_submit').addEventListener('click', async () => {
+      document.getElementById('r_submit').addEventListener('click', async (e) => {
+        e.preventDefault();
         console.log('register');
         var username = document.getElementById('r_username').value;
         var email = document.getElementById('r_email').value;
@@ -575,7 +576,7 @@
           email : email,
           password: password
         };
-          const response = await fetch('http://localhost:3000/registerUser', {
+          const response = await fetch('/registerUser', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

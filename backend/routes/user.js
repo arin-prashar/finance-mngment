@@ -13,6 +13,9 @@ router.get('/login',(req,res,next)=>{
 });
 //Budget Tools
 router.post('/createBudget',authentication.authorization,createBudget.create_budget);
+router.get('/getBudgets',createBudget.getBudget);
+router.put('/updateBudget',createBudget.updateBudget);
+router.delete('/deleteBudget',createBudget.delete_budget);
 
 //expense Tracker
 router.post('/createExpense',expenseTracker.create);
