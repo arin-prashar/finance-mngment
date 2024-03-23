@@ -18,7 +18,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(userRoute);
-
+app.use('/src', express.static(path.join(__dirname, 'src'))); 
 app.get('/', (req, res) => {
     const absolutePath = path.join(__dirname, 'src', 'LoginPage-main', 'login.html');
     console.log(absolutePath);
