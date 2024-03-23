@@ -530,7 +530,8 @@
         document.getElementById('registerForm').style.display = 'block';
       });
       
-      document.getElementById('l_submit').addEventListener('click', async () => {
+      document.getElementById('l_submit').addEventListener('click', async (e) => {
+        e.preventDefault();
         console.log('login');
         var username = document.getElementById('l_username').value;
         var password = document.getElementById('l_password').value;
@@ -540,7 +541,7 @@
         };
       
         try {
-          const response = await fetch('/login', {
+          const response = await fetch('/registerUser', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -565,7 +566,9 @@
         }
       });
       
-      document.getElementById('r_submit').addEventListener('click', async () => {
+      document.getElementById('r_submit').addEventListener('click', async (e) => {
+        
+        e.preventDefault();
         console.log('register');
         var username = document.getElementById('r_username').value;
         var email = document.getElementById('r_email').value;
