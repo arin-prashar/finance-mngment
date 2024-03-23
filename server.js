@@ -20,15 +20,15 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(userRoute);
 app.use('/src', express.static(path.join(__dirname, 'src'))); 
 app.get('/', (req, res) => {
-    const absolutePath = path.join(__dirname, 'src', 'LoginPage-main', 'login.html');
+    const absolutePath = path.join(__dirname, 'src', 'LoginPage', 'login.html');
     console.log(absolutePath);
     //res.sendFile("C:/finance-mngment/src/LoginPage-main/login.html");
-    res.sendFile("C:/finance-mngment/src/index.html");
+    res.sendFile(path.resolve("./src/index.html"));
   // res.send("What's up doc ?!");
 });
 
 app.get('/register',(req,res)=>{
-    res.sendFile("C:/finance-mngment/src/LoginPage/login.html");
+    res.sendFile(path.resolve("./src/LoginPage/login.html"));
 })
 
 connectDatabase();
