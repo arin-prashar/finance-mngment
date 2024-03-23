@@ -1,7 +1,7 @@
 const express = require ('express')
 const bodyParser=require('body-parser')
 const mongoose=require("mongoose")
-const userRoute=require('./routes/user')
+const userRoute=require('./backend/routes/user')
 const cors=require('cors');
 const path=require('path')
 const app=express();
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/register',(req,res)=>{
-    res.sendFile("C:/finance-mngment/src/LoginPage-main/login.html");
+    res.sendFile("C:/finance-mngment/src/LoginPage/login.html");
 })
 
 connectDatabase();

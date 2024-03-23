@@ -457,7 +457,7 @@
               <i class="fas fa-lock"></i>
               <input id="r_password"  type="password" placeholder="Password" />
             </div>
-            <button id="r_submit"  type="submit" class="btn" value="Sign up" ></button>
+            <button id="r_submit"  type="submit" class="btn" value="Sign up" onclick="./">Sign Up</button>
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -595,7 +595,9 @@
           const data1 = await response.json();
       
           console.log('Success:', data1);
+          window.location="/";
           document.getElementById('result').innerHTML = data1.message;
+         
         });
         </script>
   </body>
