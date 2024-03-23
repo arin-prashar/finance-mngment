@@ -1,7 +1,8 @@
 const express = require ('express')
 const bodyParser=require('body-parser')
 const mongoose=require("mongoose")
-const userRoute=require('./routes/user')
+const userRoute=require('./backend/routes/user')
+const path = require('path');
 const app=express();
 
 //const db=mongoose.connect("mongodb+srv://nandanupadhyay1234:pkPPznLjgogmQZkC@cluster0.5ltnqvy.mongodb.net/Financemanagement")
@@ -18,8 +19,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/users',userRoute);
 
 app.get('/', (req, res) => {
-    res.sendFile("/home/dkg/Study/finance-mngment/src/landing/index.html");
-  // res.send("What's up doc ?!");
+    res.sendFile(path.resolve("src/index.html"));
 });
 
 connectDatabase();

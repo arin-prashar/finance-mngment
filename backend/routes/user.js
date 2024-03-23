@@ -9,7 +9,8 @@ const router=express.Router();
 // Register User
 router.post('/registerUser',registerUser.register);
 router.get('/login',(req,res,next)=>{
-    res.sendFile("/home/dkg/Study/finance-mngment/src/landing/LoginPage-main/login.html");
+    var path = require('path');
+    res.sendFile(path.resolve('LoginPage/login.html'));
 });
 //Budget Tools
 router.post('/createBudget',authentication.authorization,createBudget.create_budget);
